@@ -1,23 +1,12 @@
 # .
 
-This template should help get you started developing with Vue 3 in Vite.
+Este repositório contém a estrutura de arquivos básica para o projeto do 1º Trimestre da Disciplina de Desenvolvimento Web II do Curso Técnico em Informática do IFC - Campus Araquari.
 
-## Recommended IDE Setup
+Ele inclui os arquivos principais para a construção de um aplicativo Vue.js, como componentes, roteamento, dados de produtos e utilitários para formatação de preços e gerenciamento do carrinho de compras. O projeto é organizado para facilitar o desenvolvimento e a manutenção, permitindo que os alunos se concentrem na implementação das funcionalidades do aplicativo.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Ainda precisam ser adicionadas diversas funcionalidades, como a implementação completa do carrinho de compras, a adição de filtros para os produtos, a criação de uma página de detalhes para cada produto, entre outras. Também é preciso definir que layout será utilizado para apresentar os livros, como será a navegação entre as páginas, e quais informações adicionais serão exibidas para os usuários. O objetivo é criar uma experiência de compra online agradável e funcional para os usuários, permitindo que eles naveguem pelos livros disponíveis, vejam detalhes sobre cada produto e gerenciem seu carrinho de compras de forma eficiente.
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Bom trabalho para todos!
 
 ## Project Setup
 
@@ -29,16 +18,4 @@ npm install
 
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
