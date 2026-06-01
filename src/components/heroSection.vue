@@ -48,7 +48,6 @@ import capaLivro from './icons/cem-anos-de-solidao 1.png'
   gap: 50px;
 }
 
-/* Lado Esquerdo */
 .hero-conteudo {
   flex: 1;
   max-width: 600px;
@@ -80,7 +79,7 @@ import capaLivro from './icons/cem-anos-de-solidao 1.png'
 }
 
 .botao-acessar {
-  background-color: #27a86c;
+  background-color: #27ae60;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -95,7 +94,6 @@ import capaLivro from './icons/cem-anos-de-solidao 1.png'
   background-color: #1e8754;
 }
 
-/* Lado Direito */
 .hero-imagem {
   flex: 1;
   display: flex;
@@ -105,7 +103,6 @@ import capaLivro from './icons/cem-anos-de-solidao 1.png'
 .hero-imagem img {
   max-width: 350px;
   height: auto;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15); /* Sombra para dar o efeito 3D igual ao Figma */
   border-radius: 4px;
 }
 </style>
