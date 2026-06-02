@@ -3,6 +3,8 @@
 import { RouterView } from 'vue-router'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import heroSection from './components/heroSection.vue';
+import DestaquesSection from './components/DestaquesSection.vue';
+import LancamentosSection from './components/LancamentosSection.vue';
 </script>
 
 <template>
@@ -10,6 +12,8 @@ import heroSection from './components/heroSection.vue';
   <main>
     <RouterView />
     <heroSection />
+    <DestaquesSection />
+    <LancamentosSection />
   </main>
 </template>
 
