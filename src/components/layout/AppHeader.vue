@@ -13,7 +13,7 @@
     </div>
     <div class="busca">
       <input type="text" placeholder="Pesquisar" />
-      <button @click="acionarPesquisa">🔍</button>
+      <button @click="acionarPesquisa"><img src="/public/images/64673.png" alt="Pesquisar" max-width="20px" height="20px"></button> 
     </div>
 
     <nav class="menu">
@@ -44,6 +44,10 @@
 
 .a.logo {
   text-decoration: none;
+}
+
+a.logo:visited {
+  color:#27a86c;
 }
 
 .logo strong {
