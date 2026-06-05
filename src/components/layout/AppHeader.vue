@@ -1,15 +1,19 @@
 <script setup>
-  // Este arquivo é um componente Vue que representa o cabeçalho do aplicativo, contendo a barra de navegação com links para as principais seções do site, como Home, Produtos e Carrinho. Ele é projetado para ser reutilizado em todas as páginas do aplicativo, proporcionando uma navegação consistente para os usuários.
-  const emit = defineEmits(['pesquisar']);
 
-  function acionarPesquisa() {
+import { RouterLink } from 'vue-router'
+
+const emit = defineEmits(['pesquisar'])
+
+function acionarPesquisa() {
   emit('pesquisar')
-  }
+}
 </script>
 <template>
   <header class="header">
     <div class="logo">
-      <a class="logo" href="App.vue"><strong>IFbooks</strong></a> <small>Apreço a leitura</small>
+      <RouterLink class="logo" to="/">
+  <strong>IFbooks</strong>
+</RouterLink> <small>Apreço a leitura</small>
     </div>
     <div class="busca">
       <input type="text" placeholder="Pesquisar" />
@@ -24,7 +28,7 @@
     </nav>
 
     <div class="acoes">
-      <button>🛍️</button>
+      <RouterLink to="/carrinho">🛍️</RouterLink>
       <button class="favorito">❤️<span class="contador">1</span></button>
       <button>👤</button>
     </div>
