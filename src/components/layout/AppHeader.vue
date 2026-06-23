@@ -1,10 +1,26 @@
 <script setup>
-  // Este arquivo é um componente Vue que representa o cabeçalho do aplicativo, contendo a barra de navegação com links para as principais seções do site, como Home, Produtos e Carrinho. Ele é projetado para ser reutilizado em todas as páginas do aplicativo, proporcionando uma navegação consistente para os usuários.
-  const emit = defineEmits(['pesquisar']);
+// Este arquivo é um componente Vue que representa o cabeçalho do aplicativo, contendo a barra de navegação com links para as principais seções do site, como Home, Produtos e Carrinho. Ele é projetado para ser reutilizado em todas as páginas do aplicativo, proporcionando uma navegação consistente para os usuários.
+import { ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
-  function acionarPesquisa() {
-  emit('pesquisar')
-  }
+const route = useRoute()
+const router = useRouter()
+
+const busca = ref(route.query.q ?? '')
+
+watch(busca, (valor) => {
+  router.push({
+    path: '/catalogo',
+    query: valor ? { q: valor } : {},
+  })
+})
+
+watch(
+  () => route.query.q,
+  (valor) => {
+    busca.value = valor ?? ''
+  },
+)
 </script>
 <template>
   <header class="header">
@@ -12,8 +28,8 @@
       <a class="logo" href="App.vue"><strong>IFbooks</strong></a> <small>Apreço a leitura</small>
     </div>
     <div class="busca">
-      <input type="text" placeholder="Pesquisar" />
-      <button @click="acionarPesquisa">🔍</button>
+        <input v-model="busca" type="search" placeholder="Buscar produto..." class="buscar" />
+      🔍
     </div>
 
     <nav class="menu">
@@ -37,12 +53,16 @@
   align-items: center;
   justify-content: center;
   gap: 80px;
-  padding: 15px 20px;
+  padding: 9px 70px;
+  width: 100%;
   border-bottom: 1px solid #e0e0e0;
   font-family: sans-serif;
+  position: fixed;
+  top: 0;
+  background-color: white;
 }
 
-.a.logo {
+.logo a {
   text-decoration: none;
 }
 
@@ -50,7 +70,7 @@
   font-size: 2rem;
   text-decoration: none;
 }
-  .logo small {
+.logo small {
   color: #27a86c;
   font-size: 0.6rem;
   display: inline-block;
@@ -64,7 +84,7 @@
   border-radius: 4px;
   display: flex;
 }
-.busca input {
+.buscar input {
   border: none;
   background: transparent;
   outline: none;
@@ -98,7 +118,6 @@
   cursor: pointer;
   position: relative;
   margin-left: 10px;
-
 }
 
 .favorito {
