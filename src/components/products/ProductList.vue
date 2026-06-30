@@ -9,7 +9,7 @@ const route = useRoute()
 const produtosFiltrados = computed(() => {
   const q = (route.query.q ?? '').toLowerCase()
 
-  if (!q) return produtos
+  if (!q) return []
 
   return produtos.filter((p) =>
     p.titulo.toLowerCase().includes(q)
@@ -29,6 +29,7 @@ const produtosFiltrados = computed(() => {
 
 <style scoped>
 .catalogo {
+  margin-top: 4vw;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
