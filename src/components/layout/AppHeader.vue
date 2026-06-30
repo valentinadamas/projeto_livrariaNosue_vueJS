@@ -10,7 +10,7 @@ const busca = ref(route.query.q ?? '')
 
 watch(busca, (valor) => {
   router.push({
-    path: '/catalogo',
+    path: '/produtos',
     query: valor ? { q: valor } : {},
   })
 })
@@ -84,7 +84,7 @@ watch(
   border-radius: 4px;
   display: flex;
 }
-.buscar input {
+.buscar  {
   border: none;
   background: transparent;
   outline: none;
