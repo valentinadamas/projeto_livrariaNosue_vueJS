@@ -3,15 +3,18 @@ import { produtos } from '@/data/product.js'
 import ProductCard from './products/ProductCard.vue'
 </script>
 
+
 <template>
   <section class="lancamentos-secao">
     <h2 class="titulo-secao">Lançamentos</h2>
 
+    <div class="livros-grid">
       <ProductCard
         v-for="livro in produtos"
         :key="livro.id"
         :livro="livro"
       />
+    </div>
   </section>
 </template>
 
@@ -28,5 +31,9 @@ import ProductCard from './products/ProductCard.vue'
   margin-bottom: 25px;
   font-weight: bold;
 }
-
+.livros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 </style>
